@@ -16,11 +16,7 @@ class Program
             double a = 0;
             double b = 0;
 
-            try
-            {
-                a = Convert.ToDouble(input);
-            }
-            catch
+            if (!double.TryParse(input, out a))
             {
                 Console.WriteLine("Не число");
                 Console.WriteLine();
@@ -30,11 +26,7 @@ class Program
             Console.WriteLine("Введите второе число:");
             string secondInput = Console.ReadLine();
 
-            try
-            {
-                b = Convert.ToDouble(secondInput);
-            }
-            catch
+            if (!double.TryParse(secondInput, out b))
             {
                 Console.WriteLine("Не число");
                 Console.WriteLine();
